@@ -30,7 +30,7 @@ src/
 │   │   ├── queries/
 │   │   │   └── OrderQueries.ts
 │   │   └── services/
-│   │       └── OrderService.ts   # Page-specific service
+│   │       └── OrderService.ts
 │   └── users/
 │       ├── components/
 │       │   ├── UserList.tsx
@@ -40,7 +40,7 @@ src/
 │       ├── queries/
 │       │   └── UserQueries.ts
 │       └── services/
-│           └── UserService.ts    # Page-specific service
+│           └── UserService.ts
 ├── types/
 │   └── index.ts
 └── components/
