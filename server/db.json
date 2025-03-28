@@ -1,0 +1,110 @@
+{
+  "products": [
+    {
+      "name": "sdgsg",
+      "description": "dsgsg",
+      "price": 43453,
+      "stock": 34636,
+      "category": "34636",
+      "id": "p2",
+      "createdAt": "2025-03-28T09:37:51.906Z",
+      "updatedAt": "2025-03-28T09:37:51.906Z"
+    },
+    {
+      "name": "dsgsgs",
+      "description": "sdgs",
+      "price": 0,
+      "stock": 0,
+      "category": "dgsg",
+      "id": "p2",
+      "createdAt": "2025-03-28T09:39:20.334Z",
+      "updatedAt": "2025-03-28T09:39:20.334Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "o1",
+      "userId": "u1",
+      "products": [
+        {
+          "productId": "p1",
+          "quantity": 1,
+          "price": 799.99
+        },
+        {
+          "productId": "p3",
+          "quantity": 1,
+          "price": 199.99
+        }
+      ],
+      "total": 999.98,
+      "status": "DELIVERED",
+      "createdAt": "2023-02-01T15:30:00Z",
+      "updatedAt": "2023-02-05T10:15:00Z"
+    },
+    {
+      "id": "o2",
+      "userId": "u2",
+      "products": [
+        {
+          "productId": "p2",
+          "quantity": 1,
+          "price": 1299.99
+        }
+      ],
+      "total": 1299.99,
+      "status": "PROCESSING",
+      "createdAt": "2023-02-10T09:45:00Z",
+      "updatedAt": "2023-02-10T09:45:00Z"
+    },
+    {
+      "id": "o3",
+      "userId": "u1",
+      "products": [
+        {
+          "productId": "p4",
+          "quantity": 2,
+          "price": 19.99
+        },
+        {
+          "productId": "p5",
+          "quantity": 1,
+          "price": 49.99
+        }
+      ],
+      "total": 89.97,
+      "status": "PENDING",
+      "createdAt": "2023-02-15T14:20:00Z",
+      "updatedAt": "2023-02-15T14:20:00Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "email": "john.doe@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "USER",
+      "createdAt": "2023-01-01T10:00:00Z",
+      "updatedAt": "2023-01-01T10:00:00Z"
+    },
+    {
+      "id": "u2",
+      "email": "jane.smith@example.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "role": "USER",
+      "createdAt": "2023-01-02T11:30:00Z",
+      "updatedAt": "2023-01-02T11:30:00Z"
+    },
+    {
+      "id": "u3",
+      "email": "admin@example.com",
+      "firstName": "Admin",
+      "lastName": "User",
+      "role": "ADMIN",
+      "createdAt": "2023-01-03T09:15:00Z",
+      "updatedAt": "2023-01-03T09:15:00Z"
+    }
+  ]
+}
