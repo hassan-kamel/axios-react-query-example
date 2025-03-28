@@ -7,47 +7,50 @@ A comprehensive example demonstrating best practices for data fetching using Axi
 ```
 src/
 ├── api/
-│   ├── axiosClient.ts      # Axios instance and interceptor configuration
+│   ├── axiosClient.ts      # Axios instance and interceptors
 │   ├── endpoints.ts        # API endpoint definitions
-│   └── queryClient.ts      # React Query client configuration
-├── pages/                  # Page components
+│   └── queryClient.ts       # React Query client configuration
+├── pages/
 │   ├── products/
-│   │   ├── components/     # Product-specific components
+│   │   ├── components/
 │   │   │   ├── ProductList.tsx
 │   │   │   ├── ProductDetail.tsx
 │   │   │   ├── ProductForm.tsx
 │   │   │   └── ProductCard.tsx
-│   │   └── queries/       # Product-specific queries
-│   │       └── ProductQueries.ts
+│   │   ├── queries/
+│   │   │   └── ProductQueries.ts
+│   │   └── services/
+│   │       └── ProductService.ts  # Page-specific service
 │   ├── orders/
-│   │   ├── components/     # Order-specific components
+│   │   ├── components/
 │   │   │   ├── OrderList.tsx
 │   │   │   ├── OrderDetail.tsx
 │   │   │   ├── OrderForm.tsx
 │   │   │   └── OrderCard.tsx
-│   │   └── queries/       # Order-specific queries
-│   │       └── OrderQueries.ts
+│   │   ├── queries/
+│   │   │   └── OrderQueries.ts
+│   │   └── services/
+│   │       └── OrderService.ts   # Page-specific service
 │   └── users/
-│       ├── components/     # User-specific components
+│       ├── components/
 │       │   ├── UserList.tsx
 │       │   ├── UserDetail.tsx
 │       │   ├── UserForm.tsx
 │       │   └── UserCard.tsx
-│       └── queries/       # User-specific queries
-│           └── UserQueries.ts
-├── services/              # API service layer
-│   ├── ProductService.ts
-│   ├── OrderService.ts
-│   └── UserService.ts
-├── types/                # TypeScript interfaces and types
+│       ├── queries/
+│       │   └── UserQueries.ts
+│       └── services/
+│           └── UserService.ts    # Page-specific service
+├── types/
 │   └── index.ts
-└── components/           # Shared components
-    ├── layout/          # Layout components
+└── components/
+    ├── layout/
     │   ├── Sidebar.tsx
     │   └── Header.tsx
-    └── shared/          # Reusable components
+    └── shared/
         ├── Pagination.tsx
         └── ErrorBoundary.tsx
+
 ```
 
 ## Features
