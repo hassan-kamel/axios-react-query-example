@@ -26,17 +26,18 @@ export interface Product extends BaseEntity {
  * Order entity interface
  */
 export interface Order extends BaseEntity {
+  customerName: string;
   userId: string;
-  products: OrderProduct[];
+  items: OrderItem[];
   total: number;
   status: OrderStatus;
+  shippingAddress: string;
+  orderDate: string;
 }
 
-/**
- * Order product interface for products within an order
- */
-export interface OrderProduct {
+export interface OrderItem {
   productId: string;
+  name: string;
   quantity: number;
   price: number;
 }
@@ -44,30 +45,42 @@ export interface OrderProduct {
 /**
  * User entity interface
  */
+
 export interface User extends BaseEntity {
+  name: string;
   email: string;
-  firstName: string;
-  lastName: string;
   role: UserRole;
+  password?: string;
 }
 
 /**
  * Possible order statuses
  */
 export enum OrderStatus {
-  PENDING = 'PENDING',
-  PROCESSING = 'PROCESSING',
-  SHIPPED = 'SHIPPED',
-  DELIVERED = 'DELIVERED',
-  CANCELLED = 'CANCELLED'
+  PENDING = "PENDING",
+  PROCESSING = "PROCESSING",
+  SHIPPED = "SHIPPED",
+  DELIVERED = "DELIVERED",
+  CANCELLED = "CANCELLED",
 }
 
 /**
  * User roles for authorization
  */
 export enum UserRole {
-  ADMIN = 'ADMIN',
-  USER = 'USER'
+  ADMIN = "admin",
+  MANAGER = "manager",
+  USER = "user",
+}
+
+/**
+ * User entity interface
+ */
+export interface User extends BaseEntity {
+  name: string;
+  email: string;
+  role: UserRole;
+  password?: string;
 }
 
 /**
@@ -96,4 +109,19 @@ export interface PaginatedResponse<T> {
   page: number;
   limit: number;
   hasMore: boolean;
+}
+
+export interface OrderCreateInput {
+  customerName: string;
+  userId: string;
+  items: OrderItem[];
+  shippingAddress: string;
+  status: OrderStatus;
+}
+
+export interface OrderUpdateInput {
+  customerName?: string;
+  items?: OrderItem[];
+  status?: OrderStatus;
+  shippingAddress?: string;
 }
